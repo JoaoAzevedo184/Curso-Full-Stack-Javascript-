@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercícios aula 13</title>
+</head>
+<body>
+  
+  <script>
+  /*
+   * EXERCÍCIO DE MANIPULAÇÃO DE STRINGS
+   * 
+   * Este exercício demonstra diferentes operações com strings em JavaScript:
+   * - Entrada de dados com prompt()
+   * - Manipulação do DOM com innerHTML
+   * - Métodos de string
+   */
+
+  // Solicita o nome completo do usuário
+  const nome = prompt('Digite seu nome completo:');
+
+  // Exibe informações sobre o nome usando diferentes métodos de string
+  document.body.innerHTML += `Seu nome é: <strong>${nome}</strong><br />`; // Nome completo
+  document.body.innerHTML += `Seu nome tem <strong>${nome.length}</strong> letras <br />`; // Quantidade de caracteres
+  document.body.innerHTML += `A segunda letra do seu nome é: <strong>${nome[1]}</strong><br />`; // Acesso por índice
+  document.body.innerHTML += `Qual o primeiro índice da letra a no seu nome? <strong>${nome.indexOf('a')}</strong><br />`; // Primeira ocorrência
+  document.body.innerHTML += `Qual o último índice da letra a no seu nome? <strong>${nome.lastIndexOf('a')}</strong><br />`; // Última ocorrência
+  document.body.innerHTML += `As últimas 3 letras do seu nome são: <strong>${nome.slice(-3, nome.length)}</strong><br />`; // Extração de substring
+  document.body.innerHTML += `As palavras do seu nome são: <strong>${nome.split(' ')}</strong><br />`; // Divisão em array
+  document.body.innerHTML += `Seu nome com letras maiúsculas: <strong>${nome.toUpperCase()}</strong><br />`; // Conversão para maiúsculas
+  document.body.innerHTML += `Seu nome com letras minúsculas: <strong>${nome.toLowerCase()}</strong><br />`; // Conversão para minúsculas
+  </script>
+</body>
+</html>
