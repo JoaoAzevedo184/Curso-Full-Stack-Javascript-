@@ -10,17 +10,24 @@
 </head>
 
 <body>
-
   <section class="container">
+    <!-- Título da aplicação -->
     <h1>Calcule seu IMC</h1>
+
+    <!-- Formulário com validações e melhor acessibilidade -->
     <form action="/" id="formulario" method="POST">
       <label for="peso">Peso</label>
-      <input type="text" id="peso" name="peso">
+      <input type="number" id="peso" name="peso" step="0.1" min="0" max="500" required placeholder="Digite seu peso em kg"
+        aria-label="Digite seu peso em quilogramas">
+
       <label for="altura">Altura</label>
-      <input type="text" id="altura" name="altura">
-      <button type="submit">Enviar</button>
+      <input type="number" id="altura" name="altura" step="0.01" min="0" max="3" required placeholder="Digite sua altura em metros"
+        aria-label="Digite sua altura em metros">
+
+      <button type="submit">Calcular IMC</button>
     </form>
 
+    <!-- Área de resultado -->
     <div id="resultado"></div>
   </section>
 
